@@ -190,23 +190,10 @@ Filein = 'UpAreaYieldT'
 TYform = 'Qua'  # Qua / Log / Log2.5
 ty=0
 # Quadratic function
-# For quadratic equation: 1. central case wheat
-ParGlo_A = [-0.0065]; ParGlo_B = [0.117]; ParGlo_C = [2.0729] # Global, 3,6,7,9
-ParNAm_A = [-0.0072]; ParNAm_B = [0.143]; ParNAm_C = [1.8667] # USA for North America,1
-ParSEA_A = [-0.0064]; ParSEA_B = [0.1152]; ParSEA_C = [2.0416] # India for South& Southeast Aisa,8
-ParAfr_A = [-0.0073]; ParAfr_B = [0.1314]; ParAfr_C = [2.3287] # Sudan for Africa,4 & 5
-ParSAm_A = [-0.0057]; ParSAm_B = [0.1026]; ParSAm_C = [1.8183] # Mexico for South America,2
-
 # Summarize to Para_A, Para_B and Para_C
 Para_A = [0,-0.0073,-0.0057,-0.0065,-0.0073,-0.0073,-0.0065,-0.0065,-0.0064,-0.0065]
 Para_B = [0,0.146, 0.102, 0.117, 0.131, 0.131, 0.117, 0.117, 0.115, 0.117]
 Para_C = [0,1.90,1.812,2.07,2.33,2.33, 2.07, 2.07, 2.04, 2.07]
-
-# Maize
-MaiGlo_A = [-0.0104]; MaiGlo_B = [0.3952]; MaiGlo_C = [-2.2224] # Global, 1, 2,,3, 6, 9
-MaiCHN_A = [-0.0146]; MaiCHN_B = [0.5256]; MaiCHN_C = [-3.0037] # China for China region, 7
-MaiAfr_A = [-0.0074]; MaiAfr_B = [0.2634]; MaiAfr_C = [-0.7861] # Africa, 4 & 5
-MaiAfr_A = [-0.0152]; MaiAfr_B = [0.5776]; MaiAfr_C = [-3.8926] # Pakistan for South& Southeast Aisa,8
 
 # Summarize to Mai_A, Mai_B and Mai_C
 Mai_A = [0,-0.0104,-0.0104,-0.0104,-0.0075,-0.0075,-0.0104,-0.0146,-0.0152,-0.0104];
@@ -215,7 +202,6 @@ Mai_C = [0,-2.22,-2.22,-2.22,-0.843,-0.843,-2.22,-3.01,-3.91,-2.22];
 
 # ratio of biomass transport and treatment
 RatTT = 0.092
-
 
 # Log+Qua function
 #tyLN = 0
@@ -236,7 +222,7 @@ TCO2_C = [0.124615,4.2314,4.5291,2.9514]
 Ybeccs = 2090                        ## 2030,2040,2050,2060,2070,2080,2090,2100
 
 ## area/capita type
-AreaType = '25AdBAUSmo'                            ## '05Ad29Smo','05Ad27Smo','05Ad23Smo'
+AreaType = '25AdBAUSmo'                            
 ## FROM Year Ys to predict npp and yield
 Ys = 2030
 
@@ -251,8 +237,7 @@ EGHG = 0
 Cm = 2; Cn = 0
 ## N2O function, Pf - peak value; Tf - final time to reach peak value
 Pf = 150; Tf = 350
-### CliSen -- lambda_0
-#CliSen = 1.4
+
 
 ##################################################
 #   2. OSCAR
@@ -269,8 +254,4 @@ execfile('OSCAR-loadD.py')
 execfile('OSCAR-loadP.py')
 execfile('OSCAR-format.py')
 execfile('OSCAR-fct.py')
-#execfile('OSCAR-fct-StopAgriClim.py') # close agriculture affect climate, close climate affect agriculture
-#execfile('OSCAR-fct-OpenAgriClim.py') # open agriculture affect climate, open climate affect agriculture
-#execfile('OSCAR-fct-OpenAgriStopClim.py') # open agriculture affect climate, close climate affect agriculture
-#execfile('OSCAR-fct-StopAgriOpenClim.py') # stop agriculture affect climate, open climate affect agriculture
 
