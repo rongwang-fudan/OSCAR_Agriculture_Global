@@ -152,8 +152,7 @@ def OSCAR_lite(p=p,fT=fT,\
     
     ## fBECCS
     Fbe = np.array([line for line in csv.reader(open('data/'+Filein+'/fbeccs.csv','r'))], dtype=dty)
-    
-    
+        
     ## Population
     Pop = np.array([line for line in csv.reader(open('data/'+Filein+'/PopulationFAO.csv','r'))], dtype=dty)
     
@@ -334,10 +333,8 @@ def OSCAR_lite(p=p,fT=fT,\
                 Yieldot_cou = YieldotYs # cropland-cereals npp
             
             ## get temperature change and yield change relationship
-#            YCT = np.array([line for line in csv.reader(open('data/'+Filein+'/Tc_YcTgrowthmean'+str(Ys)+'_3Type.csv','r'))], dtype=dty)
             if t> Ys-1700:
                 D_Ts = D_lst_t[Ys-1700,:]
-#                D_TYReg = D_lst- D_lst_t[Ys-1700,:]  #the difference between temperature at t and at 2017
                 D_CO2_Y = D_CO2_t[Ys-1700] # CO2 at the year 2017
                 D_lyp_YReg = D_lyp_t[Ys-1700,:] # precipitation at the year 2017
                  # FCO2 at first BECCS year 
