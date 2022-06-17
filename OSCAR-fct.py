@@ -358,7 +358,7 @@ def OSCAR_lite(p=p,fT=fT,\
                         Xma = -Mai_B[n]/2/Mai_A[n]
                         # Wheat
                         FTt_Wh[n] = max(tmin,Para_A[n]*(T0_Wh[n]+D_lst[n]-D_Ts[n])**2 + Para_B[n]*(T0_Wh[n]+D_lst[n]-D_Ts[n]) + Para_C[n])
-                        FTs_Wh[n] = max(tmin,Para_A[n]*(T0_Wh[n])**2 + Para_B[n]*(T0_Wh[n]+D_Ts[n]) + Para_C[n])
+                        FTs_Wh[n] = max(tmin,Para_A[n]*(T0_Wh[n])**2 + Para_B[n]*(T0_Wh[n]) + Para_C[n])
                         FTReg_Wh[n] = FTt_Wh[n]/FTs_Wh[n]
                         if FTs_Wh[n] == 0:
                             FTReg_Wh[n] = 0
